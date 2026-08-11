@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "component": {
+    "name": "MinerU2.5-Pro-2605-1.2B",
+    "version": "2605-1.2b",
+    "publisher": "OpenDataLab",
+    "upstream_repository": "https://huggingface.co/opendatalab/MinerU2.5-Pro-2605-1.2B",
+    "upstream_revision": "bff20d4ae2bf202df9f45284b4d43681555a97ed",
+    "upstream_license": "Apache-2.0",
+    "source_total_size": 2328010562
+  },
+  "archive": {
+    "repository": "https://github.com/khascon/tomd-model-archive",
+    "release_tag": "mineru2.5-pro-2605-1.2b-r1",
+    "state": "draft-pending-independent-review",
+    "published": false,
+    "unofficial_mirror": true,
+    "model_content_modified": false,
+    "contains_downloaded_executable_code": false,
+    "installation_authority": "signed ToMD application manifest"
+  },
+  "source_files": [
+    {
+      "path": "added_tokens.json",
+      "size": 800,
+      "sha256": "14155f41a9e51bee8ee7e5ff1b458418928d9ea86822ea5e98ae7bbdf1912ec8",
+      "transport": {"method": "release_asset", "asset": "added_tokens.json"}
+    },
+    {
+      "path": "config.json",
+      "size": 2840,
+      "sha256": "22097df08750242647a513043636a8dff16820a09757e9271e220bdea378df28",
+      "transport": {"method": "release_asset", "asset": "config.json"}
+    },
+    {
+      "path": "generation_config.json",
+      "size": 215,
+      "sha256": "405a603af8aed51b82ef71a5e16e7c053d11576fdc2db3c168d32bac2fd75f0d",
+      "transport": {"method": "release_asset", "asset": "generation_config.json"}
+    },
+    {
+      "path": "merges.txt",
+      "size": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "transport": {"method": "release_asset", "asset": "merges.txt"}
+    },
+    {
+      "path": "model.safetensors",
+      "size": 2312126640,
+      "sha256": "abf8681ca63b8dec7b67de257af47b821f179442f72998d0696ae2ed9232a5f0",
+      "transport": {
+        "method": "concatenate_in_order",
+        "parts": [
+          {
+            "asset": "model.safetensors.part-aa",
+            "size": 1073741824,
+            "sha256": "8775a07a764720b3a1b90b766b05c6c4108dae3108bc5c9cb36e42a389ad215b"
+          },
+          {
+            "asset": "model.safetensors.part-ab",
+            "size": 1073741824,
+            "sha256": "f643955ae0a0ae8739c8db3370a94633d9b10774f66c006db7ed2d2a9fcd12c7"
+          },
+          {
+            "asset": "model.safetensors.part-ac",
+            "size": 164642992,
+            "sha256": "4be6aea166257f05bdd017a1f3330da72f361ebb8679cb26d9f9301300a782e1"
+          }
+        ]
+      }
+    },
+    {
+      "path": "preprocessor_config.json",
+      "size": 316,
+      "sha256": "7070ae84a684ce2eb8d239c2cb38ff848085075784b213ea28a5ef5b3cdb445f",
+      "transport": {"method": "release_asset", "asset": "preprocessor_config.json"}
+    },
+    {
+      "path": "special_tokens_map.json",
+      "size": 919,
+      "sha256": "badbadb9452d98337219d280879a65eafe224d661a0216114c7cbd3e40ff4984",
+      "transport": {"method": "release_asset", "asset": "special_tokens_map.json"}
+    },
+    {
+      "path": "tokenizer.json",
+      "size": 11423550,
+      "sha256": "dceac5fc54a795ee7570d17902b47bd05412dc2afa62bdf325c3f97fcb5b87fe",
+      "transport": {"method": "release_asset", "asset": "tokenizer.json"}
+    },
+    {
+      "path": "tokenizer_config.json",
+      "size": 6596,
+      "sha256": "d762430b9c668b5c3ad95e26626e3982d5b2a59c18ff214d621d1de4318ff376",
+      "transport": {"method": "release_asset", "asset": "tokenizer_config.json"}
+    },
+    {
+      "path": "vocab.json",
+      "size": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "transport": {"method": "release_asset", "asset": "vocab.json"}
+    }
+  ],
+  "non_runtime_release_assets": [
+    {
+      "asset": "LICENSE-Apache-2.0.txt",
+      "size": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "role": "Apache-2.0 license text"
+    },
+    {
+      "asset": "THIRD-PARTY-NOTICES.md",
+      "size": 2049,
+      "sha256": "3f47631b997ae34ffc3a2b8dcf631f7e2794a82ef4f9b673617ea595b3d57ff1",
+      "role": "attribution and rights boundary"
+    },
+    {
+      "asset": "UPSTREAM-MODEL-CARD.md",
+      "size": 15571,
+      "sha256": "8f829b69be518375b02023f795b3898adec98f5ac37208239884ad88e9a21cb7",
+      "role": "unmodified pinned upstream model-card snapshot"
+    },
+    {
+      "asset": "PAYLOAD-SHA256SUMS",
+      "size": 1031,
+      "sha256": "d3eed502b8a097f0f93990d8cc04cd43309aa1244e7b172a310b0d30f90e8583",
+      "role": "payload transport checksum list"
+    },
+    {
+      "asset": "mineru2.5-pro-2605-1.2b-r1.manifest.json",
+      "role": "this manifest; verify against the Git commit and GitHub asset digest"
+    }
+  ],
+  "excluded_upstream_files": [
+    {"path": ".gitattributes", "reason": "upstream repository metadata, not runtime data"},
+    {"path": "README.md", "reason": "not runtime data; preserved separately as UPSTREAM-MODEL-CARD.md"},
+    {"path": "chat_template.jinja", "reason": "standalone interpreter template is not required by the selected ToMD runtime component"}
+  ]
+}
