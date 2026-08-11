@@ -13,7 +13,9 @@ upstream model publisher.
 - Model license declared by upstream: Apache License 2.0
 - Runtime component size: `2,328,010,562` bytes
 - Planned release tag: `mineru2.5-pro-2605-1.2b-r1`
-- Publication status: draft preparation; no immutable public model release yet
+- Publication status: independent review completed on 2026-08-12; required
+  pre-publication corrections applied; the release remains an unpublished draft
+  pending focused verification and separate owner authorization
 
 The exact file list, byte sizes, SHA-256 digests and transport mapping are in
 [`manifests/mineru2.5-pro-2605-1.2b-r1.json`](manifests/mineru2.5-pro-2605-1.2b-r1.json).
@@ -31,10 +33,12 @@ size and SHA-256 digest before it can be installed.
 
 ## Component boundary
 
-The release contains only the ten runtime data and declarative configuration
-files selected for ToMD. It does not contain downloaded Python modules,
-plugins, native executables or a remote-code loader. The standalone upstream
-`chat_template.jinja` is not part of the ToMD runtime component.
+The runtime component consists of ten data and declarative configuration files
+selected for ToMD. The release transports nine unchanged small runtime files
+and `model.safetensors` as 35 ordered parts, plus five metadata and legal
+assets: 49 release assets in total. It does not contain downloaded Python
+modules, plugins, native executables or a remote-code loader. The standalone
+upstream `chat_template.jinja` is not part of the ToMD runtime component.
 
 `model.safetensors` is larger than GitHub's per-asset limit. It is therefore
 transported as 35 ordered byte ranges of at most 64 MiB. Splitting is packaging
@@ -69,8 +73,8 @@ is not affiliated with, sponsored by or endorsed by OpenDataLab.
 
 ## Publication controls
 
-The first release must remain a GitHub draft until a reviewer who did not
-prepare it independently verifies:
+The first release remained a GitHub draft while a reviewer who did not prepare
+it independently verified:
 
 1. the upstream identity and Apache-2.0 license evidence;
 2. every source-file size and SHA-256 digest;
@@ -79,10 +83,14 @@ prepare it independently verifies:
 5. the absence of executable code and unexpected files;
 6. inclusion of the license, attribution and provenance records.
 
-The review procedure is documented in
+The review procedure and recorded result are documented in
 [`review/mineru2.5-pro-2605-1.2b-r1.md`](review/mineru2.5-pro-2605-1.2b-r1.md).
-Publication requires a separate decision after that review. Once published,
-the release and its assets are immutable and must never be silently replaced.
+The technical, integrity and legal checks passed on 2026-08-12. The reviewer
+required pre-publication documentation and repository-control corrections;
+those corrections have been applied and require focused independent
+verification. Publication still requires a separate decision by the repository
+owner. Once published, the release and its assets are immutable and must never
+be silently replaced.
 
 ## Availability and warranty
 

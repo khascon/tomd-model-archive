@@ -1,8 +1,9 @@
 # MinerU2.5-Pro-2605-1.2B for ToMD — redistribution archive r1
 
-> **Publication gate:** this release is a draft pending independent review. Do
-> not publish it until the repository provenance record states that independent
-> review passed and the repository owner separately authorizes publication.
+> **Publication status:** independent technical, integrity and legal review
+> passed on 2026-08-12. Required pre-publication corrections have been applied.
+> This release remains an unpublished draft pending focused verification of
+> those corrections and separate repository-owner authorization.
 
 This release is an unofficial redistribution archive of the ten runtime data
 files selected by ToMD from OpenDataLab's
@@ -19,10 +20,25 @@ The authoritative source and transport metadata is
 `mineru2.5-pro-2605-1.2b-r1.manifest.json`. Verify all downloaded payload assets
 against `PAYLOAD-SHA256SUMS` before reconstruction.
 
-Reconstruct the original weight file in the listed order:
+From a directory containing all downloaded release assets, verify every payload
+before reconstruction and fail if any expected part is missing or corrupted:
 
-```sh
-cat model.safetensors.part-a?? > model.safetensors
+```zsh
+set -euo pipefail
+export LC_ALL=C
+shasum -a 256 -c PAYLOAD-SHA256SUMS
+
+parts=(model.safetensors.part-a??(N))
+(( ${#parts[@]} == 35 ))
+for part in "${parts[@]}"; do
+  [[ -f "$part" ]]
+done
+
+cat "${parts[@]}" > model.safetensors
+[[ "$(wc -c < model.safetensors | tr -d ' ')" == "2312126640" ]]
+printf '%s  %s\n' \
+  'abf8681ca63b8dec7b67de257af47b821f179442f72998d0696ae2ed9232a5f0' \
+  'model.safetensors' | shasum -a 256 -c -
 ```
 
 The reconstructed file must be exactly `2,312,126,640` bytes and have SHA-256:
@@ -31,10 +47,9 @@ The reconstructed file must be exactly `2,312,126,640` bytes and have SHA-256:
 abf8681ca63b8dec7b67de257af47b821f179442f72998d0696ae2ed9232a5f0
 ```
 
-The command relies on the lexicographic asset-name order `aaa` through `abi`,
-which is the order recorded in the manifest. There must be exactly 35 parts.
-Transport splitting does not modify the model. The source file is accepted only
-after final reconstruction and verification.
+The command names the exact manifest order `aaa` through `abi` and requires all
+35 parts. Transport splitting does not modify the model. The source file is
+accepted only after payload, final-size and final SHA-256 verification succeeds.
 
 ## Legal and security boundary
 

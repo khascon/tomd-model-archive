@@ -14,6 +14,9 @@ sufficient evidence.
 - Expected runtime source total: `2,328,010,562` bytes
 - Expected draft payload assets: nine unchanged small runtime files and 35
   ordered parts of `model.safetensors`
+- Expected total draft release assets: 49 (44 payload assets plus
+  `LICENSE-Apache-2.0.txt`, `THIRD-PARTY-NOTICES.md`,
+  `UPSTREAM-MODEL-CARD.md`, `PAYLOAD-SHA256SUMS` and the manifest)
 
 ## Required evidence
 
@@ -55,3 +58,18 @@ whether publication is approved or blocked.
 
 Even an approving review does not publish the release. Publication requires a
 separate authorization from the repository owner.
+
+## Recorded independent review result
+
+- Review completed: 2026-08-12
+- Reviewer independence: the reviewer did not prepare the repository commit or
+  draft Release
+- Verdict: `ACCEPT AFTER FIXES`
+- Technical, integrity and legal result: passed without mismatch across the
+  pinned upstream revision, all 49 draft assets, reconstructed SafeTensors
+  content and redistribution records
+- Required corrections: remove mutable lifecycle state from the immutable
+  manifest, replace the obsolete publication gate, protect the planned tag and
+  tighten asset-count and reconstruction instructions
+- Current status: corrections applied; focused independent verification and
+  separate repository-owner authorization remain required before publication

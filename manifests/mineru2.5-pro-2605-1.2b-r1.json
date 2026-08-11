@@ -12,8 +12,6 @@
   "archive": {
     "repository": "https://github.com/khascon/tomd-model-archive",
     "release_tag": "mineru2.5-pro-2605-1.2b-r1",
-    "state": "draft-pending-independent-review",
-    "published": false,
     "unofficial_mirror": true,
     "model_content_modified": false,
     "contains_downloaded_executable_code": false,

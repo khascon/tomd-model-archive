@@ -2,15 +2,17 @@
 
 ## Record status
 
-- Record date: 2026-08-11
-- Archive state: draft release preparation
-- Public model assets published: no
+- Record date: 2026-08-11; last updated: 2026-08-12
+- Archive state: unpublished draft; independent review completed and required
+  pre-publication corrections applied
 - Planned release tag: `mineru2.5-pro-2605-1.2b-r1`
-- Verification state: preparer checks complete; independent review pending
+- Verification state: technical, integrity and legal checks passed; focused
+  verification of the corrective changes remains required before publication
 
 This record identifies the upstream artifact selected for the ToMD accurate
-document-recognition component. It does not authorize publication or claim that
-the draft has passed independent review.
+document-recognition component. The independent review result does not itself
+publish the draft or authorize publication; only a separate decision by the
+repository owner can do that.
 
 ## Upstream identity
 
@@ -89,7 +91,10 @@ are `67,108,864` bytes each and the final part is `30,425,264` bytes.
 Concatenating parts `aaa` through `abi` produced a file that passed both
 byte-for-byte comparison and the expected source SHA-256 check.
 
-These are preparer checks, not independent review.
+The independent reviewer repeated the upstream, asset, reconstruction,
+SafeTensors, security and legal checks and reported no mismatch. The review
+covered all 49 draft assets and reconstructed the original weight file with the
+expected size and SHA-256. The recorded result is linked below.
 
 ## Redistribution requirements
 
@@ -105,12 +110,14 @@ The first immutable release must satisfy all of the following conditions:
 8. The release tag and assets become immutable when published.
 9. The signed ToMD application manifest, not a remote checksum, controls installation.
 
-## Publication gate
+## Independent review and publication control
 
-Do not publish the model release until the manifest, all draft assets,
-reconstructed output and legal records have been independently checked against
-the pinned upstream revision using the repository review procedure.
+Independent review completed on 2026-08-12 with verdict `ACCEPT AFTER FIXES`.
+The technical, integrity and legal verification passed. The required fixes were
+to remove mutable lifecycle assertions from the immutable manifest, update the
+publication text, make reconstruction fail closed and protect the planned tag.
 
-Before publication, this record and the release notes must be updated to state
-the independent review result. Publication additionally requires a separate
-authorization from the repository owner.
+Those corrections are now applied. The release must remain a draft until a
+focused independent review confirms them and the repository owner separately
+authorizes publication. The current publication state is determined by the
+GitHub Release page, not by this provenance record.
