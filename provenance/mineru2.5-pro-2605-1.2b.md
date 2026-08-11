@@ -84,10 +84,10 @@ archive manifest. All eight JSON files parsed successfully.
 JSON header, metadata format `pt`, 681 tensors and only BF16 tensor data. No
 Pickle or downloaded Python module is part of the component.
 
-The weight file was split into three ordered transport parts of
-`1,073,741,824`, `1,073,741,824` and `164,642,992` bytes. Concatenating those
-parts produced a file that passed both byte-for-byte comparison and the expected
-source SHA-256 check.
+The weight file was split into 35 ordered transport parts. The first 34 parts
+are `67,108,864` bytes each and the final part is `30,425,264` bytes.
+Concatenating parts `aaa` through `abi` produced a file that passed both
+byte-for-byte comparison and the expected source SHA-256 check.
 
 These are preparer checks, not independent review.
 

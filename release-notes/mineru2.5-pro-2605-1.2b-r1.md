@@ -22,7 +22,7 @@ against `PAYLOAD-SHA256SUMS` before reconstruction.
 Reconstruct the original weight file in the listed order:
 
 ```sh
-cat model.safetensors.part-aa model.safetensors.part-ab model.safetensors.part-ac > model.safetensors
+cat model.safetensors.part-a?? > model.safetensors
 ```
 
 The reconstructed file must be exactly `2,312,126,640` bytes and have SHA-256:
@@ -31,6 +31,8 @@ The reconstructed file must be exactly `2,312,126,640` bytes and have SHA-256:
 abf8681ca63b8dec7b67de257af47b821f179442f72998d0696ae2ed9232a5f0
 ```
 
+The command relies on the lexicographic asset-name order `aaa` through `abi`,
+which is the order recorded in the manifest. There must be exactly 35 parts.
 Transport splitting does not modify the model. The source file is accepted only
 after final reconstruction and verification.
 

@@ -12,7 +12,7 @@ sufficient evidence.
 - Upstream model: `opendatalab/MinerU2.5-Pro-2605-1.2B`
 - Upstream revision: `bff20d4ae2bf202df9f45284b4d43681555a97ed`
 - Expected runtime source total: `2,328,010,562` bytes
-- Expected draft payload assets: nine unchanged small runtime files and three
+- Expected draft payload assets: nine unchanged small runtime files and 35
   ordered parts of `model.safetensors`
 
 ## Required evidence
@@ -31,7 +31,8 @@ The independent review report must explicitly determine each of the following:
 5. Every small payload asset independently matches the pinned upstream file by
    byte size and SHA-256.
 6. Every weight transport part matches its manifest size and SHA-256.
-7. Concatenating parts `aa`, `ab`, `ac` produces exactly `2,312,126,640` bytes
+7. Concatenating exactly 35 parts from `aaa` through `abi` in manifest order
+   produces exactly `2,312,126,640` bytes
    with SHA-256
    `abf8681ca63b8dec7b67de257af47b821f179442f72998d0696ae2ed9232a5f0`.
 8. The reconstructed SafeTensors header is valid JSON and describes only tensor

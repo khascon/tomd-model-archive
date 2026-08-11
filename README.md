@@ -37,7 +37,8 @@ plugins, native executables or a remote-code loader. The standalone upstream
 `chat_template.jinja` is not part of the ToMD runtime component.
 
 `model.safetensors` is larger than GitHub's per-asset limit. It is therefore
-transported as three ordered byte ranges. Splitting is packaging only: the
+transported as 35 ordered byte ranges of at most 64 MiB. Splitting is packaging
+only: the
 reconstructed file must be verified as exactly `2,312,126,640` bytes with
 SHA-256 `abf8681ca63b8dec7b67de257af47b821f179442f72998d0696ae2ed9232a5f0`
 before installation.
