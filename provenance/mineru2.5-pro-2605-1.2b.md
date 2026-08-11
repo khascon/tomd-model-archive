@@ -3,16 +3,15 @@
 ## Record status
 
 - Record date: 2026-08-11; last updated: 2026-08-12
-- Archive state: unpublished draft; independent review completed and required
-  pre-publication corrections applied
+- Review state: independent review and focused corrective verification completed
 - Planned release tag: `mineru2.5-pro-2605-1.2b-r1`
-- Verification state: technical, integrity and legal checks passed; focused
-  verification of the corrective changes remains required before publication
+- Verification state: technical, integrity and legal checks passed with final
+  verdict `ACCEPT`
 
 This record identifies the upstream artifact selected for the ToMD accurate
 document-recognition component. The independent review result does not itself
-publish the draft or authorize publication; only a separate decision by the
-repository owner can do that.
+publish the Release; publication is a separate repository-owner action. The
+authoritative current publication state is the GitHub Release metadata.
 
 ## Upstream identity
 
@@ -94,7 +93,8 @@ byte-for-byte comparison and the expected source SHA-256 check.
 The independent reviewer repeated the upstream, asset, reconstruction,
 SafeTensors, security and legal checks and reported no mismatch. The review
 covered all 49 draft assets and reconstructed the original weight file with the
-expected size and SHA-256. The recorded result is linked below.
+expected size and SHA-256. The detailed result is recorded in the
+[`independent review procedure`](../review/mineru2.5-pro-2605-1.2b-r1.md).
 
 ## Redistribution requirements
 
@@ -117,7 +117,7 @@ The technical, integrity and legal verification passed. The required fixes were
 to remove mutable lifecycle assertions from the immutable manifest, update the
 publication text, make reconstruction fail closed and protect the planned tag.
 
-Those corrections are now applied. The release must remain a draft until a
-focused independent review confirms them and the repository owner separately
-authorizes publication. The current publication state is determined by the
-GitHub Release page, not by this provenance record.
+Those corrections were applied and focused independent verification completed
+with final verdict `ACCEPT`. Publication is a separate repository-owner action.
+The authoritative current publication state is the GitHub Release metadata,
+not this provenance record.

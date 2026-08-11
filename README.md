@@ -13,9 +13,10 @@ upstream model publisher.
 - Model license declared by upstream: Apache License 2.0
 - Runtime component size: `2,328,010,562` bytes
 - Planned release tag: `mineru2.5-pro-2605-1.2b-r1`
-- Publication status: independent review completed on 2026-08-12; required
-  pre-publication corrections applied; the release remains an unpublished draft
-  pending focused verification and separate owner authorization
+- Verification: independent review and focused corrective verification
+  completed on 2026-08-12 with final verdict `ACCEPT`
+- Publication state: the authoritative current publication state is the GitHub
+  Release metadata; publication is a separate repository-owner action
 
 The exact file list, byte sizes, SHA-256 digests and transport mapping are in
 [`manifests/mineru2.5-pro-2605-1.2b-r1.json`](manifests/mineru2.5-pro-2605-1.2b-r1.json).
@@ -87,10 +88,11 @@ The review procedure and recorded result are documented in
 [`review/mineru2.5-pro-2605-1.2b-r1.md`](review/mineru2.5-pro-2605-1.2b-r1.md).
 The technical, integrity and legal checks passed on 2026-08-12. The reviewer
 required pre-publication documentation and repository-control corrections;
-those corrections have been applied and require focused independent
-verification. Publication still requires a separate decision by the repository
-owner. Once published, the release and its assets are immutable and must never
-be silently replaced.
+those corrections were applied and independently verified with final verdict
+`ACCEPT`. Publication is a separate decision by the repository owner. The
+authoritative current publication state is the GitHub Release metadata. Once
+published, the release and its assets are immutable and must never be silently
+replaced.
 
 ## Availability and warranty
 

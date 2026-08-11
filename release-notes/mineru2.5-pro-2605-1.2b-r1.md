@@ -1,9 +1,10 @@
 # MinerU2.5-Pro-2605-1.2B for ToMD — redistribution archive r1
 
-> **Publication status:** independent technical, integrity and legal review
-> passed on 2026-08-12. Required pre-publication corrections have been applied.
-> This release remains an unpublished draft pending focused verification of
-> those corrections and separate repository-owner authorization.
+> **Verification:** independent technical, integrity and legal review completed
+> on 2026-08-12. The required corrections were applied and independently
+> verified with final verdict `ACCEPT`. Publication is a separate
+> repository-owner action. The authoritative current publication state is the
+> GitHub Release metadata.
 
 This release is an unofficial redistribution archive of the ten runtime data
 files selected by ToMD from OpenDataLab's

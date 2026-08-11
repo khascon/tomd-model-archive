@@ -71,5 +71,17 @@ separate authorization from the repository owner.
 - Required corrections: remove mutable lifecycle state from the immutable
   manifest, replace the obsolete publication gate, protect the planned tag and
   tighten asset-count and reconstruction instructions
-- Current status: corrections applied; focused independent verification and
-  separate repository-owner authorization remain required before publication
+- Status at initial review completion: corrections applied; focused independent
+  verification and separate repository-owner authorization remained required
+
+## Focused corrective verification result
+
+- Verification completed: 2026-08-12
+- Reviewer independence: the verifier did not implement the corrective commit
+- Final verdict: `ACCEPT`
+- Result: all required corrections, the unchanged 49-asset inventory, draft
+  Release metadata and active tag protection were verified without a blocker
+- Publication boundary: publication was defined as a separate repository-owner
+  action and was not performed by either reviewer
+- Current-state authority: the GitHub Release metadata, not this historical
+  review record, is authoritative for publication state
